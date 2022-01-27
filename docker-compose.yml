@@ -1,0 +1,13 @@
+version: "3"
+services:
+    app:
+        image: react-with-tsx-sample:1.0
+        container_name: react-with-tsx-sample
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./app:/home/app
+        ports:
+            - $PORT:3000
+        tty: true
